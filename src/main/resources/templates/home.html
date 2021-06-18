@@ -13,6 +13,21 @@
 <body>
 
 	<div class="container">
+
+		<div class="jumbotron mb-2">
+			<h1 class="display-4">Meus pedidos</h1>			
+		</div>
+
+		<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+			<div class="navbar-nav">
+				<a class="nav-link active" href="">Todos</a>
+				<a class="nav-link" href="">Aguardando</a>
+				<a class="nav-link" href="">Aprovado</a>
+				<a class="nav-link" href="">Entregue</a>
+			</div>
+			<a href="/pedido/formulario" class="btn btn-outline-secondary">Novo</a>
+		</nav>
+
 		<!-- Content here -->
 		<div class="card" th:each="order: ${orders}">
 			<div class="card-header" th:text="${order.productName}">Nome do Produto</div>
@@ -20,8 +35,9 @@
 				<div class="row">
 					<div class="col-12 col-sm-8 mb-3">
 						<div class="row">
-							<div class = "col-md-5">Valor: <span th:text="${order.productValue}">200,09</span></div>
-							<div class = "col-md-7">Data de entrega: <span th:text="${order.dateDelivery}">10/09/2021</span></div>
+							<div class="col-md-5">Valor: <span th:text="${order.productValue}">200,09</span></div>
+							<div class="col-md-7">Data de entrega: <span
+									th:text="${order.dateDelivery}">10/09/2021</span></div>
 						</div>
 						<div>Produto</div>
 						<div> <input class="form-control" th:value="${order.urlProduct}" value="imput do produto" />
