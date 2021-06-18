@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MUDI</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron mb-2">
+			<h1 class="display-4">Novo Pedido</h1>
+		</div>
+
+		<form action ="/order/new" method="POST">
+			<div>
+				<label for="productName">Produto</label>
+				<input name="productName" placeholder="Nome do produto" />
+				<small>Informe qual o nome do produto</small>
+			</div>
+			<div>
+				<label for="urlProduct">Url do Anúncio</label>
+				<input name="urlProduct" placeholder="Url do anúncio do produto" />
+				<small>Procure em um site o anúncio do produto que você deseja e cole a URL aqui</small>
+			</div>
+			<div>
+				<label for="urlImage">Url da Imagem</label>
+				<input name="urlImage" placeholder="Url da imagem" />
+				<small>Copie a URL de uma boa imagem do produto e cole aqui para ajudar a conseguir compradores</small>
+			</div>
+			<div>
+				<label for="description">Descrição</label>
+				<textarea name="description" placeholder="Adicione detalhes importantes para o comprador"></textarea>
+			</div>
+			<button type="submit">Cadastrar</button>	
+ 
+		</form>
+
+	</div>
+</body>
+
+</html>
