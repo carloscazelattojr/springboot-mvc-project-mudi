@@ -21,20 +21,20 @@ public class OrderController {
 	private OrderRepository orderRepository;
 
 	@GetMapping("/form")
-	public String formulary() {
-		return "order/formulary";
+	public String formulary(OrderDto newOrder) {
+		return "order/form";
 	}
 
-	@PostMapping("/new")
+	@PostMapping("/neworder")
 	public String newOrder(@Valid OrderDto newOrder, BindingResult result) {
 
 		if (result.hasErrors()) {
-			return "order/formulary";
+			return "order/form";
 		}
 
-		Order order = newOrder.toOrder();
-		orderRepository.save(order);
-		return "/home";
+		Order order1 = newOrder.toOrder();
+		orderRepository.save(order1);
+		return"redirect:/home";
 	}
 
 }

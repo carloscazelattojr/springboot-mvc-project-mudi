@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MUDI</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron mb-2">
+			<h1 class="display-4">Novo Pedido</h1>
+		</div>
+
+		<div class="card">
+			<form th:object="${orderDto}" class="card-body" th:action="@{/order/neworder}" method="POST">
+				<div class="form-group">
+					<label for="productName">Produto</label>
+					<input th:field="*{productName}" th:errorclass="is-invalid" class="form-control" placeholder="Nome do produto" />
+					<small>Informe qual o nome do produto</small>
+					<div th:errors="*{productName}" class = "invalid-feedback">
+						Error
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="urlProduct">Url do Anúncio</label>
+					<input th:field="*{urlProduct}" class="form-control" th:errorclass="is-invalid" placeholder="Url do anúncio do produto" />
+					<small>Procure em um site o anúncio do produto que você deseja e cole a URL aqui</small>
+					<div th:errors="*{urlProduct}" class = "invalid-feedback">
+						Error
+					</div>					
+				</div>
+				<div class="form-group">
+					<label for="urlImage">Url da Imagem</label>
+					<input th:field="*{urlImage}" class="form-control" th:errorclass="is-invalid" placeholder="Url da imagem" />
+					<small>Copie a URL de uma boa imagem do produto e cole aqui para ajudar a conseguir	compradores</small>
+					<div th:errors="*{urlImage}" class = "invalid-feedback"> 
+						Error
+					</div>					
+				</div>
+				<div class="form-group">
+					<label for="description">Descrição</label>
+					<textarea th:field="*{description}" class="form-control" th:errorclass="is-invalid"	placeholder="Adicione detalhes importantes para o comprador"></textarea>
+					<div th:errors="*{description}" class = "invalid-feedback" >
+						Error
+					</div>					
+					
+				</div>
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+
+			</form>
+		</div>
+
+	</div>
+</body>
+
+</html>
