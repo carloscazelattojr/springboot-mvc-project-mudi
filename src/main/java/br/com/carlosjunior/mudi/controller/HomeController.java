@@ -16,6 +16,12 @@ public class HomeController {
 	@Autowired
 	private OrderRepository orderRepository; 
 	
+	@GetMapping
+	public String homeMain() {
+		return  "redirect:/home";
+	}
+	
+	
 	@GetMapping("/home")
 	public String home(Model model ) {
 

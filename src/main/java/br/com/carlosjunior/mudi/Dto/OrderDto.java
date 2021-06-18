@@ -3,19 +3,28 @@ package br.com.carlosjunior.mudi.Dto;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotBlank;
+
 import br.com.carlosjunior.mudi.model.Order;
 
 
 
 public class OrderDto {
 
+	@NotBlank
 	private String productName;
+	
+	@NotBlank
+	private String urlProduct;
+	
+	@NotBlank
+	private String urlImage;
+
+	private String description;
 	private BigDecimal productValue;
 	private LocalDate dateDelivery;
-	private String urlProduct;
-	private String urlImage;
-	private String description;
 
+	
 	public String getProductName() {
 		return productName;
 	}

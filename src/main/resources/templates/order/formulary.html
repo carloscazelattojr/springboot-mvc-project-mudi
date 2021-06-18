@@ -18,29 +18,33 @@
 			<h1 class="display-4">Novo Pedido</h1>
 		</div>
 
-		<form action ="/order/new" method="POST">
-			<div>
-				<label for="productName">Produto</label>
-				<input name="productName" placeholder="Nome do produto" />
-				<small>Informe qual o nome do produto</small>
-			</div>
-			<div>
-				<label for="urlProduct">Url do Anúncio</label>
-				<input name="urlProduct" placeholder="Url do anúncio do produto" />
-				<small>Procure em um site o anúncio do produto que você deseja e cole a URL aqui</small>
-			</div>
-			<div>
-				<label for="urlImage">Url da Imagem</label>
-				<input name="urlImage" placeholder="Url da imagem" />
-				<small>Copie a URL de uma boa imagem do produto e cole aqui para ajudar a conseguir compradores</small>
-			</div>
-			<div>
-				<label for="description">Descrição</label>
-				<textarea name="description" placeholder="Adicione detalhes importantes para o comprador"></textarea>
-			</div>
-			<button type="submit">Cadastrar</button>	
- 
-		</form>
+		<div class="card">
+			<form class="card-body" action="/order/new" method="POST">
+				<div class="form-group">
+					<label for="productName">Produto</label>
+					<input name="productName" class="form-control" placeholder="Nome do produto" />
+					<small>Informe qual o nome do produto</small>
+				</div>
+				<div class="form-group">
+					<label for="urlProduct">Url do Anúncio</label>
+					<input name="urlProduct" class="form-control" placeholder="Url do anúncio do produto" />
+					<small>Procure em um site o anúncio do produto que você deseja e cole a URL aqui</small>
+				</div>
+				<div class="form-group">
+					<label for="urlImage">Url da Imagem</label>
+					<input name="urlImage" class="form-control" placeholder="Url da imagem" />
+					<small>Copie a URL de uma boa imagem do produto e cole aqui para ajudar a conseguir
+						compradores</small>
+				</div>
+				<div class="form-group">
+					<label for="description">Descrição</label>
+					<textarea name="description" class="form-control"
+						placeholder="Adicione detalhes importantes para o comprador"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+
+			</form>
+		</div>
 
 	</div>
 </body>
