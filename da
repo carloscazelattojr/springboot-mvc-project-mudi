@@ -1,0 +1,65 @@
+[33mcommit 9ba0970ffb4b31d22b2b67d6a94b4f3c6d02cea8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 13:55:00 2021 -0300
+
+    Thymeleaf implemented
+
+[33mcommit cc03e74da45228c3f3667cbfb95a74ea41b3a01b[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 12:06:45 2021 -0300
+
+    Validation include
+
+[33mcommit 45d921d5856ffbbf6b1666d1811f521c69a27c4b[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 11:53:02 2021 -0300
+
+    Order Repository, Order Dto and Order Form HTML created
+
+[33mcommit 7a876241b0be0499de3ae13f4562f65704ad7dcf[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 11:05:58 2021 -0300
+
+    NavBar implemented at Home.html
+
+[33mcommit 603c3a0a8eeb72e8ed14d7499b674c1487c15af0[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 10:39:59 2021 -0300
+
+    Order Repository update
+
+[33mcommit a2bf9e8c164d3868a3b213576c21dcf2799d6ebe[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 10:31:37 2021 -0300
+
+    Order Repository created
+
+[33mcommit be1f5bd159a2c77a8994d8937c48dd5c8bf2e817[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 10:19:25 2021 -0300
+
+    First config JPA with Order class
+
+[33mcommit 2461159404ea4cdc23344fbd8cdaa9424dd16185[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Fri Jun 18 10:00:23 2021 -0300
+
+    Bootstrap - include
+
+[33mcommit 6273bf989fd238d064b7bda2a67dbfa47b78a462[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Sun Jun 13 17:03:07 2021 -0300
+
+    Created Model and View Order
+
+[33mcommit 83a745da113553cf15fdf6701e1bea2205dd6b93[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Sun Jun 13 16:17:04 2021 -0300
+
+    Project ajusted
+
+[33mcommit b4d1ab10773e31f2ae974eb8920c4130ef8929af[m
+Author: Carlos Cazelatto Junior <carlosjunior1983@gmail.com>
+Date:   Sun Jun 13 16:13:59 2021 -0300
+
+    Project Mudi created
