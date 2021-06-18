@@ -4,25 +4,38 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_order")
+@Table(name = "tb_order")
 public class Order {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String productName;
 	private BigDecimal productValue;
 	private LocalDate dateDelivery;
 	private String urlProduct;
 	private String urlImage;
 	private String description;
+
+	@Enumerated(EnumType.STRING)
+	private StatusOrder status;
+
+	public StatusOrder getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusOrder status) {
+		this.status = status;
+	}
 
 	public String getProductName() {
 		return productName;

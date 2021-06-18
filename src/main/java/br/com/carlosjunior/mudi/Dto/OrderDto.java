@@ -3,6 +3,7 @@ package br.com.carlosjunior.mudi.Dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.carlosjunior.mudi.model.Order;
+import br.com.carlosjunior.mudi.model.StatusOrder;
 
 public class OrderDto {
 
@@ -56,6 +57,7 @@ public class OrderDto {
 		order.setProductName(productName);
 		order.setUrlImage(urlImage);
 		order.setUrlProduct(urlProduct);
+		order.setStatus(StatusOrder.AGUARDANDO);
 
 		return order;
 	}
