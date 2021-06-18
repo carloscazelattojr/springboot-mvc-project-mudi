@@ -6,29 +6,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MUDI</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
 
-	<div th:each="order: ${orders}">
-		<div th:text="${order.productName}">Nome do Produto</div>
-		<div>Valor: R$ <span th:text="${order.productValue}" >200,09</span></div>
-		<div>Data de entrega: <span th:text="${order.dateDelivery}">10/09/2021</span></div>
+	<div class="container">
+		<!-- Content here -->
+		<div class="card" th:each="order: ${orders}">
+			<div class="card-header" th:text="${order.productName}">Nome do Produto</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-12 col-sm-8 mb-3">
+						<div class="row">
+							<div class = "col-md-5">Valor: <span th:text="${order.productValue}">200,09</span></div>
+							<div class = "col-md-7">Data de entrega: <span th:text="${order.dateDelivery}">10/09/2021</span></div>
+						</div>
+						<div>Produto</div>
+						<div> <input class="form-control" th:value="${order.urlProduct}" value="imput do produto" />
+						</div>
 
-		<div>Produto</div>
-		<div> <input th:value="${order.urlProduct}"value = "imput do produto" /> </div>
-
-		<div>Descrição</div>
-		<div>
-			<textarea th:text="${order.description}" >Descricao do pedido</textarea>
+						<div>Descrição</div>
+						<div>
+							<textarea class="form-control" th:text="${order.description}">Descricao do pedido</textarea>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4">
+						<div>
+							<img class="img-thumbnail" th:src="${order.urlImage}" src="">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-
-		<div>
-			<img th:src="${order.urlImage}" src="">
-		</div>
-
 	</div>
-
 </body>
 
 </html>
