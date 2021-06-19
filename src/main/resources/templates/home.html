@@ -32,9 +32,9 @@
 				<div class="row">
 					<div class="col-12 col-sm-8 mb-3">
 						<div class="row">
-							<div class="col-md-5">Valor: <span th:text="${order.productValue}">200,09</span></div>
+							<div class="col-md-5">Valor: <span th:if="${order.productValue != null}" th:text="${'R$ '+#numbers.formatDecimal(order.productValue,3,'POINT',2,'COMMA')}">200,09</span></div>
 							<div class="col-md-7">Data de entrega: <span
-									th:text="${order.dateDelivery}">10/09/2021</span></div>
+									th:text="${#temporals.format(order.dateDelivery, 'dd/MM/yyyy')}">10/09/2021</span></div>
 						</div>
 						<div>Produto</div>
 						<div> <input class="form-control" th:value="${order.urlProduct}" value="imput do produto" />
